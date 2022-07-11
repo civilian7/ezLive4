@@ -1,0 +1,96 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FA70E4B2-D374-497F-B7EE-1462893DCFC4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Packages\ezLive.Skia.Core.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\ezLive.Skia.VCL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\ezLive.Skia.FMX.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\ezLive.Skia.VCL.Design.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Packages\ezLive.Skia.FMX.Design.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="D:\OpenSource\Delphi\skia4delphi\Samples\Demo\FMX\Projects\RAD Studio 11 Alexandria\Skia4Delphi.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ezLive_Skia_Core">
+        <MSBuild Projects="Packages\ezLive.Skia.Core.dproj"/>
+    </Target>
+    <Target Name="ezLive_Skia_Core:Clean">
+        <MSBuild Projects="Packages\ezLive.Skia.Core.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ezLive_Skia_Core:Make">
+        <MSBuild Projects="Packages\ezLive.Skia.Core.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ezLive_Skia_VCL">
+        <MSBuild Projects="Packages\ezLive.Skia.VCL.dproj"/>
+    </Target>
+    <Target Name="ezLive_Skia_VCL:Clean">
+        <MSBuild Projects="Packages\ezLive.Skia.VCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ezLive_Skia_VCL:Make">
+        <MSBuild Projects="Packages\ezLive.Skia.VCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ezLive_Skia_FMX">
+        <MSBuild Projects="Packages\ezLive.Skia.FMX.dproj"/>
+    </Target>
+    <Target Name="ezLive_Skia_FMX:Clean">
+        <MSBuild Projects="Packages\ezLive.Skia.FMX.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ezLive_Skia_FMX:Make">
+        <MSBuild Projects="Packages\ezLive.Skia.FMX.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ezLive_Skia_VCL_Design">
+        <MSBuild Projects="Packages\ezLive.Skia.VCL.Design.dproj"/>
+    </Target>
+    <Target Name="ezLive_Skia_VCL_Design:Clean">
+        <MSBuild Projects="Packages\ezLive.Skia.VCL.Design.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ezLive_Skia_VCL_Design:Make">
+        <MSBuild Projects="Packages\ezLive.Skia.VCL.Design.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ezLive_Skia_FMX_Design">
+        <MSBuild Projects="Packages\ezLive.Skia.FMX.Design.dproj"/>
+    </Target>
+    <Target Name="ezLive_Skia_FMX_Design:Clean">
+        <MSBuild Projects="Packages\ezLive.Skia.FMX.Design.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ezLive_Skia_FMX_Design:Make">
+        <MSBuild Projects="Packages\ezLive.Skia.FMX.Design.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Skia4Delphi">
+        <MSBuild Projects="D:\OpenSource\Delphi\skia4delphi\Samples\Demo\FMX\Projects\RAD Studio 11 Alexandria\Skia4Delphi.dproj"/>
+    </Target>
+    <Target Name="Skia4Delphi:Clean">
+        <MSBuild Projects="D:\OpenSource\Delphi\skia4delphi\Samples\Demo\FMX\Projects\RAD Studio 11 Alexandria\Skia4Delphi.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Skia4Delphi:Make">
+        <MSBuild Projects="D:\OpenSource\Delphi\skia4delphi\Samples\Demo\FMX\Projects\RAD Studio 11 Alexandria\Skia4Delphi.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ezLive_Skia_Core;ezLive_Skia_VCL;ezLive_Skia_FMX;ezLive_Skia_VCL_Design;ezLive_Skia_FMX_Design;Skia4Delphi"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ezLive_Skia_Core:Clean;ezLive_Skia_VCL:Clean;ezLive_Skia_FMX:Clean;ezLive_Skia_VCL_Design:Clean;ezLive_Skia_FMX_Design:Clean;Skia4Delphi:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ezLive_Skia_Core:Make;ezLive_Skia_VCL:Make;ezLive_Skia_FMX:Make;ezLive_Skia_VCL_Design:Make;ezLive_Skia_FMX_Design:Make;Skia4Delphi:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

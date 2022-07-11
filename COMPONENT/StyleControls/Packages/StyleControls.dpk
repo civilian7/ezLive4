@@ -1,0 +1,84 @@
+package StyleControls;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  vcl,
+  vclimg,
+  vclactnband,
+  designide,
+  xmlrtl,
+  vclie,
+  dbrtl,
+  vcldb;
+
+contains
+  scControls in '..\Source\scControls.pas',
+  scDrawUtils in '..\Source\scDrawUtils.pas',
+  scPReg in '..\Source\scPReg.pas',
+  scImageCollection in '..\Source\scImageCollection.pas',
+  scShellControls in '..\Source\scShellControls.pas',
+  scAdvancedControls in '..\Source\scAdvancedControls.pas',
+  scExtControls in '..\Source\scExtControls.pas',
+  scCalendar in '..\Source\scCalendar.pas',
+  scBitmapEditor in '..\Source\scBitmapEditor.pas' {scBitmapEditorForm},
+  scAppPager in '..\Source\scAppPager.pas',
+  scToolPager in '..\Source\scToolPager.pas',
+  scStyledForm in '..\Source\scStyledForm.pas',
+  scStyleManager in '..\Source\scStyleManager.pas',
+  scHint in '..\Source\scHint.pas',
+  scModernControls in '..\Source\scModernControls.pas',
+  scWebBrowser in '..\Source\scWebBrowser.pas',
+  scAdvancedPager in '..\Source\scAdvancedPager.pas',
+  scDBControls in '..\Source\scDBControls.pas',
+  scDBGrids in '..\Source\scDBGrids.pas',
+  scGrids in '..\Source\scGrids.pas',
+  scHtmlControls in '..\Source\scHtmlControls.pas',
+  scOpenFileDialog in '..\Source\scOpenFileDialog.pas' {scOpenFileDlgForm},
+  scOpenPictureDialog in '..\Source\scOpenPictureDialog.pas',
+  scSelectPathDialog in '..\Source\scSelectPathDialog.pas' {scSelPathDlgForm},
+  scColorDialog in '..\Source\scColorDialog.pas' {scColorDlgFrm},
+  scFontDialog in '..\Source\scFontDialog.pas' {scFontDlgFrm},
+  scPrinterDialog in '..\Source\scPrinterDialog.pas' {scPrintDlgFrm},
+  scColorControls in '..\Source\scColorControls.pas',
+  scDialogs in '..\Source\scDialogs.pas',
+  scGPControls in '..\Source\scGPControls.pas',
+  scGPUtils in '..\Source\scGPUtils.pas',
+  scGPMeters in '..\Source\scGPMeters.pas',
+  scGPImages in '..\Source\scGPImages.pas',
+  scDlgStrs in '..\Source\scDlgStrs.pas',
+  scGPDBControls in '..\Source\scGPDBControls.pas',
+  scGPExtControls in '..\Source\scGPExtControls.pas',
+  scGPPagers in '..\Source\scGPPagers.pas',
+  scGPVertPagers in '..\Source\scGPVertPagers.pas',
+  scFontViewer in '..\Source\scFontViewer.pas' {FontViewerForm},
+  scGPFontControls in '..\Source\scGPFontControls.pas',
+  scMsgDialog in '..\Source\scMsgDialog.pas' {scMsgDlgForm};
+
+end.

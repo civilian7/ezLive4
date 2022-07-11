@@ -1,0 +1,67 @@
+package ezLive.Socket;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS ON}
+{$RANGECHECKS ON}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl;
+
+contains
+  BSD.kqueue in '..\Source\BSD.kqueue.pas',
+  Linux.epoll in '..\Source\Linux.epoll.pas',
+  Net.CrossHttpMiddleware in '..\Source\Net.CrossHttpMiddleware.pas',
+  Net.CrossHttpParams in '..\Source\Net.CrossHttpParams.pas',
+  Net.CrossHttpRouter in '..\Source\Net.CrossHttpRouter.pas',
+  Net.CrossHttpServer in '..\Source\Net.CrossHttpServer.pas',
+  Net.CrossHttpUtils in '..\Source\Net.CrossHttpUtils.pas',
+  Net.CrossServer in '..\Source\Net.CrossServer.pas',
+  Net.CrossSocket.Base in '..\Source\Net.CrossSocket.Base.pas',
+  Net.CrossSocket.Epoll in '..\Source\Net.CrossSocket.Epoll.pas',
+  Net.CrossSocket.Iocp in '..\Source\Net.CrossSocket.Iocp.pas',
+  Net.CrossSocket.Kqueue in '..\Source\Net.CrossSocket.Kqueue.pas',
+  Net.CrossSocket in '..\Source\Net.CrossSocket.pas',
+  Net.CrossSslDemoCert in '..\Source\Net.CrossSslDemoCert.pas',
+  Net.CrossSslServer in '..\Source\Net.CrossSslServer.pas',
+  Net.CrossSslSocket.Base in '..\Source\Net.CrossSslSocket.Base.pas',
+  Net.CrossSslSocket.OpenSSL in '..\Source\Net.CrossSslSocket.OpenSSL.pas',
+  Net.CrossSslSocket in '..\Source\Net.CrossSslSocket.pas',
+  Net.CrossWebSocketServer in '..\Source\Net.CrossWebSocketServer.pas',
+  Net.OpenSSL in '..\Source\Net.OpenSSL.pas',
+  Net.Packet in '..\Source\Net.Packet.pas',
+  Net.PacketServer in '..\Source\Net.PacketServer.pas',
+  Net.PacketSocket in '..\Source\Net.PacketSocket.pas',
+  Net.RawSocket in '..\Source\Net.RawSocket.pas',
+  Net.SocketAPI in '..\Source\Net.SocketAPI.pas',
+  Net.Winsock2 in '..\Source\Net.Winsock2.pas',
+  Net.Wship6 in '..\Source\Net.Wship6.pas',
+  Utils.DateTime in '..\Source\Utils.DateTime.pas',
+  Utils.Logger in '..\Source\Utils.Logger.pas',
+  Utils.RegEx in '..\Source\Utils.RegEx.pas',
+  Utils.Utils in '..\Source\Utils.Utils.pas';
+
+end.
